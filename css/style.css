@@ -1,4 +1,5 @@
 
+
 *{
 	margin: 0;
 	padding: 0;
@@ -117,24 +118,80 @@ html{
 	margin: 0 auto;
 }
 
+/*
+background-color: #e4f1f9;
+    background-image: url(../img/bg-intro-triangle-desktop.svg),url(../img/bg-back-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% bottom;
+    background-size: auto,auto*/
+
+
 
 .intro{
-	background: url("../img/white@1xUp.svg") bottom,
-	url("../img/photo-background@2x.jpg")  no-repeat;
+	background: url("../img/whiteMobile320Up.svg") bottom,
+	url("../img/photo-background@2x.jpg") 50% 100% no-repeat;
 	 background-size: cover;
+
  
 	width: 100%;
-	height: 392px;
+	
 }
 
+.indexLogo{
+	box-sizing: border-box;
+	width: 87.5%;
+	margin: 0 auto;
+	padding-top: 45px;
+	padding-bottom: 50px;
+
+}
+
+
+
 .mainInfo h1{
+	padding-top: 40px;
 	font-family: inherit;
 	font-size: 18px;
 	line-height: 26px;
 	text-align: center;
 }
 
+.mainInfo p{
+	padding-top: 28px;
+	padding-bottom: 26px;
+	font-family: inherit;
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: 400;
+	text-align: center;
+}
 
+.reason{
+	
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: #eeeeee;
+}
+
+.bigReason .reason{
+	background-color: #fff;
+	padding-left: 22%;
+	padding-right: 15.625%;
+
+}
+
+
+.bigReason .reason:first-child{
+	background-color: #81b3d2;
+	padding-left: 0;
+	padding-right: 0;
+	text-align: center;
+}
+
+.bigReason figure{
+	margin: 0;
+	padding: 0;
+}
 
 
 
@@ -309,6 +366,7 @@ body{
 }
 
 }
+
 
 
 
