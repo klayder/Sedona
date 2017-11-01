@@ -30,6 +30,7 @@ body{
 	line-height: 21px;
 	text-transform: uppercase;
 	height: 100%;
+	position: relative;
 }
 
 html{
@@ -45,16 +46,38 @@ html{
 .mainNavigationToggleBtn{
 	position: absolute;
 	top: 0;
-	right: 10px;
+	right: 0;
 	border: none;
-	width: 13.5%;
+	width: 19.7%;
 	height: 56px;
 	box-sizing: border-box;
-	background-color: rgba(0,255,0,.3);
+	background-color: transparent;
 }
 
 
+.mainNavigationToggleBtn .btnItem{
+	margin: 1px;
+	width: 30px;
+	height: 4px;
+	border-radius: 4px;
+	background-color: #fff;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -15px;
+	margin-top: -2px;
 
+}
+
+.mainNavigationToggleBtn .btnItem:first-child{
+	transform: rotate(45deg);
+}
+.mainNavigationToggleBtn .btnItem:nth-child(2){
+	transform: rotate(45deg);
+}
+.mainNavigationToggleBtn .btnItem:last-child{
+	transform: rotate(-45deg);
+}
 
 
 
