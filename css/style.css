@@ -37,11 +37,15 @@ html{
 	background-color: #f2f2f2;
 }
 
-/*
+
 .mainNavigation{
 	display: none;
 	
-}*/
+}
+
+.mainNavigationShow{
+	display: block;
+}
 
 .mainNavigationToggleBtn{
 	position: absolute;
@@ -52,6 +56,7 @@ html{
 	height: 56px;
 	box-sizing: border-box;
 	background-color: transparent;
+	outline: 0 none;
 }
 
 
@@ -60,7 +65,7 @@ html{
 	width: 30px;
 	height: 4px;
 	border-radius: 4px;
-	background-color: #fff;
+	background-color: #81b3d2;
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -70,15 +75,31 @@ html{
 }
 
 .mainNavigationToggleBtn .btnItem:first-child{
-	transform: rotate(45deg);
+	margin-top: -10px;
 }
 .mainNavigationToggleBtn .btnItem:nth-child(2){
-	transform: rotate(45deg);
+	
 }
 .mainNavigationToggleBtn .btnItem:last-child{
-	transform: rotate(-45deg);
+	margin-top: 6px;
 }
 
+
+.mainNavigationToggleBtnHide .btnItem:first-child{
+	transform: rotate(45deg);
+	margin-top: -2px;
+}
+.mainNavigationToggleBtnHide .btnItem:nth-child(2){
+	display: none;
+}
+.mainNavigationToggleBtnHide .btnItem:last-child{
+	transform: rotate(-45deg);
+	margin-top: -2px;
+}
+
+.mainNavigationToggleBtnHide .btnItem{
+	background-color: #fff;
+}
 
 
 .flexContainer{
@@ -191,6 +212,8 @@ html{
 }
 
 
+
+
 .reason{
 	padding-top: 40px;
 	padding-bottom: 40px;
@@ -204,6 +227,10 @@ html{
 	padding-left: 22%;
 	padding-right: 15.625%;
 
+
+	padding-top: 0;
+	padding-bottom: 30px;
+
 }
 
 
@@ -212,10 +239,12 @@ html{
 	text-align: center;
 	padding-left: 0;
 	padding-right: 0;
+	padding-top: 40px;
+	padding-bottom: 40px;
 	
 }
 
-.bigReason:first-child .reason{
+.bigReason:first-child .reason:first-child{
 	padding-top: 60px;
 	background-image: url(../img/bg-triangle.svg);
 	background-position: 50% top;
@@ -258,7 +287,9 @@ html{
 
 
 
-
+.bigReason:first-child figure{
+	padding-bottom: 40px;
+}
 
 
 .bigReason figure{
@@ -275,8 +306,110 @@ html{
 }
 
 
+.bigReason .reason:nth-child(n+2){
+	position: relative;
 
-.mainInfo .btn{
+}
+
+.bigReason .reason:nth-child(n+2)::before{
+	content: "";
+	position: absolute;
+	display: block;
+	width: 40px;
+	height: 40px;
+	background-color: rgba(0,255,255,.7);
+	right: : 0;
+	top: 0;
+	margin-left: -50px;
+	margin-top: -11px;
+
+}
+
+
+
+
+
+
+
+.searchHotel{
+	display: none;
+	width: 87.5%;
+	margin: 0 auto;
+	padding-bottom: 50px;
+	padding-top: 25px;
+}
+
+.searchHotelShow{
+	display: block;
+}
+
+
+.mainInfo{
+	font-size: 0;
+	line-height: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.searchHotel input,
+.flexPersNumb button{
+	border: none;
+	height: 39px;
+	background-color: #f2f2f2;
+	width: 39px;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 23px;
+}
+
+.searchHotel label{
+	padding-left: 15px;
+
+}
+
+
+.searchHotel > input{
+	width: 100%;
+	text-align: left;
+}
+
+.searchHotel label,
+.searchHotel input,
+.flexPersNumb button{
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: 700;
+
+}
+
+.flexPersNumb{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+
+
+
+.searchHotel>.btn{
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	font-family: inherit;
+	font-size: 21px;
+	line-height: 26px;
+	border: none;
+	padding-top: 15px;
+	padding-bottom: 18px;
+	background-color: #81b3d2;
+	margin-top: 22px;
+
+}
+
+
+
+
+.mainInfo>.btn{
 	padding-top: 30px;
 	padding-bottom: 33px;
 	display: block;
@@ -305,8 +438,8 @@ html{
 }
 
 .mainFooter{
-	padding-top: 28px;
-	padding-bottom: 30px;
+	padding-top: 25px;
+	padding-bottom: 25px;
 	font-size: 21px;
 	line-height: 26px;
 	text-align: center;
@@ -324,8 +457,10 @@ html{
 	padding-top: 40px;
 }
 
+
+
 .footerCopyright{
-	padding-top: 50px;
+	
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 26px;
@@ -340,7 +475,43 @@ html{
 	cursor: pointer;
 }
 
+.footerSocial{
+	display: flex;
+	justify-content: space-around;
+	padding: 0;
+	margin-top: 40px;
+	margin-bottom: 45px;
+	margin-left: 26.5%;
+	margin-right: 26.5%;
+	
+}
 
+.footerSocial .socialBtn{
+	font-size: 0;
+	width: 46px;
+	height: 48px;
+	background-color: #81b3d2;
+
+}
+
+.footerCopyright .CopyrightBtn{
+	padding-left: 50px;
+	font-size: 0;
+	line-height: 0;
+	cursor: pointer;
+	position: relative;
+}
+
+.CopyrightBtn::before{
+	content: "";
+	width: 35px;
+	height: 35px;
+	background-color: rgba(0,255,255,.7);
+	position: absolute;
+	left: 7px;
+	top: 0;
+	margin-top: -25px;
+	}
 
 
 
@@ -356,7 +527,9 @@ body{
 }
 
 
-
+.wrongAction{
+	animation: shake 0.6s; 
+}
 
 
 /*
@@ -510,6 +683,11 @@ body{
 }*/
 
 
-
+@keyframes shake{
+	0%, 100% {transform: translateX(0px);}
+	10%,30%,50%,70%,90% {transform: translateX(10px);}
+	20%,40%,60%,80% {transform: translateX(-10px);}
+	
+}
 
 

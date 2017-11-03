@@ -64,19 +64,20 @@
 						<img src="img/photo-city@2x.jpg" alt="фото седоны №1" >
 					</figure>
 
-					<section class="reason">
+					<section class="reason lodging">
 						<h2>Жилье</h2>
 						<p>Рекомендуем пожить в настоящем мотеле, как в кино</p>
 					</section>
 
-					<section class="reason">
-						<h2>Еда</h2>
-						<p>Всегда заказывайте фирменный бургер, вы не разочаруетесь</p>
-					</section>
-
-					<section class="reason">
+					<section class="reason souvenirs">
 						<h2>Cувениры</h2>
 						<p>Не только китайского, но и местного производства</p>
+					</section>
+
+					<section class="reason food">
+						
+						<h2>Еда</h2>
+						<p>Всегда заказывайте фирменный бургер, вы не разочаруетесь</p>
 					</section>
 				</div>
 				
@@ -121,10 +122,47 @@
 				<a href="#" class="btn">Поиск гостиницы в Седоне</a>
 
 				<form class="searchHotel">
-					<label>Дата заезда :<input type="text" name="checkIn"> </label><br>
-					<label>Дата выезда :<input type="text" name="checkOut"> </label><br>
-					<label>Взрослые : <input type="text" name="Adults" pattern="[0-9]*" min="1" value="1"></label><br>
-					<label>Детей : <input type="text" name="Childrens" pattern="[0-9]*" min="0" value="0"></label>
+					<label for="checkIn">Дата заезда:</label>
+					<input type="text" name="checkIn" id="checkIn" required>
+					<label for="checkOut">Дата выезда:</label>
+					<input type="text" name="checkOut" id="checkOut" required>
+					
+					<div class="flexPersNumb">
+						<div class="flexItemNumb">
+
+							<label for="numbAdults">Взрослые:</label>
+
+							<div class="adults">
+
+								<button class="lessPers">-</button>
+								<input type="text" name="numbAdults" id="numbAdults" min="1" value="1">
+								<button class="morePers">+</button>
+								
+							</div>
+
+						</div>
+
+						<div class="flexItemNumb">
+
+							<label for="numbChildrens">Дети:</label>
+
+							<div class="Children">
+
+								<button class="lessPers">-</button>
+								<input type="text" name="numbChildrens" id="numbChildrens" min="0" value="0">
+								<button class="morePers">+</button>
+								
+							</div>
+
+						</div>
+						
+					</div>
+					
+					
+					
+
+					
+					
 					<button class="btn" type="submit">Найти</button>
 					
 				</form>
@@ -149,17 +187,17 @@
 			<div class="container">
 
 				<section class="footerLink">
-					<a href="#">#Visitsedona</a>
+					<a href="https://www.instagram.com/visitsedona/">#Visitsedona</a>
 				</section>
 
 				<section class="footerSocial">
-					<a href="#" class="socialBtn socialTw">twitter</a>
-					<a href="#" class="socialBtn socialFb">facebook</a>
-					<a href="#" class="socialBtn socialYt">Youtobe</a>
+					<a href="https://twitter.com/cityofsedonaaz" class="socialBtn socialTw">twitter</a>
+					<a href="https://www.facebook.com/VisitSedona/" class="socialBtn socialFb">facebook</a>
+					<a href="https://www.youtube.com/watch?v=gTk-KLU3Ehc" class="socialBtn socialYt">Youtobe</a>
 				</section>
 
 				<section class="footerCopyright">
-					<p>	website by <a href="#" class="btn">Andrei Sarokin</a>for <a href="#" class="btn">HTMLAcademi</a></p>		
+					<p>	website by <a href="https://github.com/klayder" class="CopyrightBtn">Andrei Sarokin</a>for <a href="https://htmlacademy.ru/" class="CopyrightBtn">HTMLAcademi</a></p>		
 				</section>
 
 			</div>
